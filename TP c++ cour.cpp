@@ -12,6 +12,7 @@ int main(int argc, char** argv)
     fgets(str, 1000, stdin);
     l = strlen(str);
     n = l;
+    n = n - 1;
     do
     {
         scanf_s("%c", &lettre);
