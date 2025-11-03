@@ -34,5 +34,7 @@ int main(int argc, char** argv)
         printf("%c : ", d);
         printf("%d\n", cara[i]);
     }
+    printf("Espace : %d\n", cara[26]);
+
     return 0;
 }
