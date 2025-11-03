@@ -22,17 +22,24 @@ int main(int argc, char** argv)
     while (str[n] != '\0'){
         i++;
         n--;
-        if (str[n] != lettre)
-        {
-            //cette ligne ne ser a rien, hormie écrire sa
-        }
-        else
+        if(n<0)
         {
             break;
         }
+        else
+        {
+            if (str[n] != lettre)
+            {
+                //cette ligne ne ser a rien, hormie écrire sa
+            }
+            else
+            {
+                break;
+            }
+        }
     } 
 
-    if (i != l)
+    if (i != l || i< l)
     {
         printf("Le caractere %c se trouve a la position %d a partir de la droite", lettre, i);
     }
