@@ -6,7 +6,7 @@ int main(int argc, char** argv)
 {
     int cara[27] = {0};
     char str[1001];
-    int l, i = 0, d = 0;
+    int l, i = 0, d = 0, inde =0;
 
     fgets(str, 1000, stdin);
     l = strlen(str);
@@ -14,18 +14,22 @@ int main(int argc, char** argv)
     for (i = 0; i < l; i++)
     {
         d = str[i] - 65;
-        if (d<=0 && d<25)
+        if (0<=d && d<25)
         {
             cara[d]++;
         }
         d = str[i] - 97;
-        if (d <= 0 && d < 25)
+        if (0 <= d && d < 25)
         {
             cara[d]++;
         }
         if (str[i] == ' ')
         {
             cara[26]++;
+        }
+        else
+        {
+            inde++;
         }
     }
     for (i = 0; i <= 25; i++)
