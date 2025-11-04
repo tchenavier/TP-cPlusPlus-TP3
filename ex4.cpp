@@ -18,5 +18,5 @@ int main(int argc, char** argv)
             str[i] = d + 97;
         }
     }
-    printf(" %s", str);
+    printf("%s",str);
 }
