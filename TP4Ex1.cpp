@@ -1,12 +1,11 @@
 #include <stdio.h>
-#include <string.h>
 #include <ctype.h>
 
 int main(int argc, char** argv)
 {
     int tab[41];
     int modifier[41];
-    int chiffre, i=0,index=0,n=0,min;
+    int chiffre,j, i=0,index=0,n=0,min;
    
     //printf("salut");
     for (; i < 40;i++) {
@@ -21,9 +20,9 @@ int main(int argc, char** argv)
     n = i - 1;
 
     chiffre= n;
-    for (int i = 0; i < n - 1; i++) {//tris par selection
+    for (i = 0; i < n - 1; i++) {//tris par selection
         index = i;
-        for (int j = 0; j < n - i - 1; j++) { // utilisation de j pour avoir deux avancement
+        for (j = i + 1; j < n ; j++) { // utilisation de j pour avoir deux avancement
             if (tab[index] > tab[j]) {
                 index = j;
             }
@@ -33,9 +32,10 @@ int main(int argc, char** argv)
             tab[i] = tab[index];
             tab[index] = min;
         }
-        i = 0;
-        for (; i < chiffre; i++) {
-            printf("%d", tab[i]);
+
+        i = 0;//reinitialisation de i
+        for (; i < chiffre; i++) {//affichage
+            printf("%d, ", tab[i]);
         }
     }
 
