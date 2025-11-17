@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int main(int argc, char** argv)
+/*int main(int argc, char** argv)
 {
     char str[1001];
     char lettre = 'a';
@@ -48,4 +48,4 @@ int main(int argc, char** argv)
         printf("Le caractere %c n'a pas ete trouve dans la chaine", lettre);
     }
     return 0;
-}
+}*/

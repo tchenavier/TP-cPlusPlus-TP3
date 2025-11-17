@@ -4,33 +4,40 @@
 
 int main(int argc, char** argv)
 {
-    int tab[41] = { 0 };
-    char modifier[41];
-    int chiffre = 0, i=0,y=0,n=0, min;
+    int tab[41];
+    int modifier[41];
+    int chiffre, i=0,index=0,n=0,min;
    
-    do {
+    //printf("salut");
+    for (; i < 40;i++) {
         scanf_s("%i", &chiffre);
         tab[i] = chiffre;
-        i++;
-    } while (i<=41 && tab[i]!=-1);
-
-    i = 0;
-    while (tab[i]!=-1)
-    {
-        n++;
-    }
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = 0; j < n - i - 1; j++) {
-            if (tab[j] > tab[j + 1]) {
-                // Échange des valeurs
-                int temp = tab[j];
-                tab[j] = tab[j + 1];
-                tab[j + 1] = temp;
-            }
+        if (chiffre == -1)
+        {
+            break;
         }
     }
 
+    n = i - 1;
 
+    chiffre= n;
+    for (int i = 0; i < n - 1; i++) {//tris par selection
+        index = i;
+        for (int j = 0; j < n - i - 1; j++) { // utilisation de j pour avoir deux avancement
+            if (tab[index] > tab[j]) {
+                index = j;
+            }
+        }
+        if (index != i) {
+            min = tab[i];
+            tab[i] = tab[index];
+            tab[index] = min;
+        }
+        i = 0;
+        for (; i < chiffre; i++) {
+            printf("%d", tab[i]);
+        }
+    }
 
     return 0;
 }
