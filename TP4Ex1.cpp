@@ -3,11 +3,11 @@
 
 int main(int argc, char** argv)
 {
-    int tab[41];
+    long int tab[300001];
     int chiffre,j, i=0,index=0,n=0,min;
    
     //printf("salut");
-    for (; i < 40;i++) {
+    for (; i < 300000;i++) {
         scanf_s("%d", &chiffre);
         tab[i] = chiffre;
         if (chiffre == -1)
@@ -19,7 +19,7 @@ int main(int argc, char** argv)
     n = i;
 
     chiffre= n;
-    for (int e = 0; e < 4; e++) {
+    for (int e = 0; e < 10; e++) {
         for (i = 0; i < n - 1; i++) {//tris par selection
             index = i;
             for (j = i + 1; j < n ; j++) { // utilisation de j pour avoir deux avancement
@@ -38,15 +38,7 @@ int main(int argc, char** argv)
 
             if (i != 0 && i != chiffre && i != chiffre-1)
             {
-                printf("%d, ",tab[i]);
-            }
-            else if (i == 0)
-            {
-                printf("%d, ", tab[i]);            
-            }
-            else
-            {
-                printf("%d", tab[i]);
+                printf("%d \n",tab[i]);
             }
         }    
 
