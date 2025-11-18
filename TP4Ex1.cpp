@@ -3,11 +3,12 @@
 
 int main(int argc, char** argv)
 {
-    long int tab[300001];
+
+    long int tab[3000];//Remplacer 3000 par 300000
     int chiffre,j, i=0,index=0,n=0,min;
    
     //printf("salut");
-    for (; i < 300000;i++) {
+    for (; i < 3000;i++) {// Remplacer 3000 par 300000
         scanf_s("%d", &chiffre);
         tab[i] = chiffre;
         if (chiffre == -1)
@@ -15,11 +16,8 @@ int main(int argc, char** argv)
             break;
         }
     }
-
     n = i;
-
     chiffre= n;
-    for (int e = 0; e < 10; e++) {
         for (i = 0; i < n - 1; i++) {//tris par selection
             index = i;
             for (j = i + 1; j < n ; j++) { // utilisation de j pour avoir deux avancement
@@ -33,13 +31,8 @@ int main(int argc, char** argv)
                 tab[index] = min;
             }
         }
-    }
         for (i = 0; i < chiffre;i++) {//affichage
-
-            if (i != 0 && i != chiffre && i != chiffre-1)
-            {
-                printf("%d \n",tab[i]);
-            }
+                printf("%ld \n",tab[i]);
         }    
 
     return 0;
