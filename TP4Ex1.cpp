@@ -9,7 +9,7 @@ int main(int argc, char** argv)
    
     //printf("salut");
     for (; i < 40;i++) {
-        scanf_s("%i", &chiffre);
+        scanf_s("%d", &chiffre);
         tab[i] = chiffre;
         if (chiffre == -1)
         {
@@ -17,27 +17,35 @@ int main(int argc, char** argv)
         }
     }
 
-    n = i - 1;
+    n = i;
 
     chiffre= n;
-    for (i = 0; i < n - 1; i++) {//tris par selection
-        index = i;
-        for (j = i + 1; j < n ; j++) { // utilisation de j pour avoir deux avancement
-            if (tab[index] > tab[j]) {
-                index = j;
+    for (int e = 0; e < 4; e++) {
+        for (i = 0; i < n - 1; i++) {//tris par selection
+            index = i;
+            for (j = i + 1; j < n ; j++) { // utilisation de j pour avoir deux avancement
+                if (tab[index] > tab[j]) {
+                    index = j;
+                }
+            }
+            if (index != i) {
+                min = tab[i];
+                tab[i] = tab[index];
+                tab[index] = min;
             }
         }
-        if (index != i) {
-            min = tab[i];
-            tab[i] = tab[index];
-            tab[index] = min;
-        }
-
-        i = 0;//reinitialisation de i
-        for (; i < chiffre; i++) {//affichage
-            printf("%d, ", tab[i]);
-        }
     }
+        for (i = 0; i < chiffre;) {//affichage
+            printf("%d", tab[i]);
+            i++;
+            printf(", ");
+            printf("%d", tab[i]);
+            i++;
+            if (i != chiffre-1 && i != chiffre) {
+                printf(", ");
+            }
+            
+        }    
 
     return 0;
 }
