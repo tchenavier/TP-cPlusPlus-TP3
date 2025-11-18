@@ -4,7 +4,6 @@
 int main(int argc, char** argv)
 {
     int tab[41];
-    int modifier[41];
     int chiffre,j, i=0,index=0,n=0,min;
    
     //printf("salut");
@@ -35,16 +34,20 @@ int main(int argc, char** argv)
             }
         }
     }
-        for (i = 0; i < chiffre;) {//affichage
-            printf("%d", tab[i]);
-            i++;
-            printf(", ");
-            printf("%d", tab[i]);
-            i++;
-            if (i != chiffre-1 && i != chiffre) {
-                printf(", ");
+        for (i = 0; i < chiffre;i++) {//affichage
+
+            if (i != 0 && i != chiffre && i != chiffre-1)
+            {
+                printf("%d, ",tab[i]);
             }
-            
+            else if (i == 0)
+            {
+                printf("%d, ", tab[i]);            
+            }
+            else
+            {
+                printf("%d", tab[i]);
+            }
         }    
 
     return 0;
