@@ -49,8 +49,9 @@ void tri_rapide(int *tableau, int longueur)
 
 int main(int argc, char** argv)
 {
-    int * tab = new int[NB_VAL];//Remplacer 3000 par 300000
-    int chiffre, j, i = 0, index = 0, n = 0, min;
+    //int * tab = new int[NB_VAL];//Remplacer 3000 par 300000 Le * tab = new int[NB_VAL] est pour outre passer la limite du débugurer
+    int tab [NB_VAL];
+    int chiffre, i = 0;
 
     srand(time(NULL));//horloge
 
@@ -59,21 +60,21 @@ int main(int argc, char** argv)
 
     for (; i < NB_VAL; i++) {// Remplacer 3000 par 300000
 
-        tab[i] = rand() % 300000;
+        //scanf_s("%d",tab[i]);
+         tab[i] = rand() % 300000; //generation de nombre alleatoire pour remplire les 300000 place du tableau
 
     }
-    n = i;
     chiffre = i;
 
-    tri_rapide(tab, i);
+    tri_rapide(tab, i);//appelle tri rapide
 
     auto last = clock_type::now();//horloge
     auto interval = last - start;//horloge
 
     std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(interval).count() << "ms" << std::endl; //horloge
 
-    /*for (i = 0; i < chiffre; i++) {//affichage
-             printf("%ld \n",tab[i]);
-    }*/
+    for (i = 0; i < chiffre; i++) {//affichage
+             printf("%d \n",tab[i]);
+    }
     return 0;
 }
