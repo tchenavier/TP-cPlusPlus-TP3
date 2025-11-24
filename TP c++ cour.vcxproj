@@ -125,6 +125,7 @@
   <ItemGroup>
     <ClCompile Include="TP c++ cour.cpp" />
     <ClCompile Include="TP4Ex1.cpp" />
+    <ClCompile Include="TP4Ex2.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

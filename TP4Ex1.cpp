@@ -5,6 +5,7 @@
 #include <time.h>
 #include <iostream>
 
+/*
 #define NB_VAL 300000
 
 int main(int argc, char** argv)
@@ -43,10 +44,9 @@ int main(int argc, char** argv)
 
         std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(interval).count() << "ms" << std::endl; //horloge
 
-       /*for (i = 0; i < chiffre; i++) {//affichage
-                printf("%ld \n",tab[i]);
-       }*/
+       
     return 0;
 }
 //https://fr.wikipedia.org/wiki/Tri_%C3%A0_bulles
 //https://fr.wikipedia.org/wiki/Tri_par_s%C3%A9lection 
+*/
