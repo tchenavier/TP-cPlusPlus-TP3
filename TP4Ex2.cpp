@@ -5,9 +5,9 @@
 #include <time.h>
 #include <iostream>
 
-#define NB_VAL 300000
+/*#define NB_VAL 300000
 
-void echanger(int *tableau, int i1, int i2)
+void echanger(int* tableau, int i1, int i2)
 {
     int tmp = tableau[i1]; //sauvegarde i1 tmp est une variable temporaire
     tableau[i1] = tableau[i2]; // Ecrase i1 par i2
@@ -77,4 +77,4 @@ int main(int argc, char** argv)
              printf("%d \n",tab[i]);
     }
     return 0;
-}
+}*/
